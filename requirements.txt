@@ -1,0 +1,8 @@
+aiogram
+python-dotenv
+netmiko
+transliterate
+pythonping
+requests
+pyodbc
+docker

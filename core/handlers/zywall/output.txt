@@ -1,0 +1,16 @@
+
+
+Router> 
+
+
+Router> 
+
+
+Router> 
+
+
+Router> show arp-table | match "08:6f"
+
+192.168.206.15           ether   d8:bb:c1:90:08:6f   C                     lan1
+
+Router> exit
