@@ -22,7 +22,6 @@ The bot provides the following features:
 The bot has several commands that can be used to access its features:
 
 - `/start`: Sends a ...
-- `/help`: Sends a ...
 
 ## Requirements
 
