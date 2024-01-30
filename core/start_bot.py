@@ -41,21 +41,5 @@ async def restart_bot(message: types.Message):
     # await main()
 
     await message.reply(f'Выполняется перезагрузка БОТА\n')
-    # docker_client = docker.DockerClient(base_url='unix://var/run/docker.sock')
-    # docker_client.close()
-    # Создаем клиент Docker
-
-    # Создаем клиент Docker
-    client = docker.from_env()
-
-    # Получаем ID контейнера, в котором запущен скрипт
-    container_id = os.environ['HOSTNAME']
-
-    # Перезапускаем контейнер
-    client.containers.restart(container_id)
-
-
-@router.message(Command('info'))
-async def restart_bot(message: types.Message):
-    client = docker.APIClient(base_url='unix://var/run/docker.sock')
-    client.version()
+    docker_client = docker.DockerClient(base_url='unix://var/run/docker.sock')
+    docker_client.close()
