@@ -24,10 +24,13 @@ The bot has several commands that can be used to access its features:
 ## Requirements
 
 - aiogram
-- dotenv
 - python-dotenv
 - netmiko
 - transliterate
+- pythonping
+- requests
+- pyodbc
+- docker
 
 ## Installation
 
