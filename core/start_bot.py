@@ -1,18 +1,12 @@
-import asyncio
-from core.handlers.zkt import zkt_sql_list
 from aiogram import types, F, Router
 from core.keyboards.main_kb import get_inline_main, get_reply_main
-from .restart import restart_bot
 from aiogram.filters import Command
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
-from create_bot import Bot, dp
-import subprocess
-import sys
 import os
 import logging
 import docker
-from main import main
+
 
 router = Router()
 
@@ -21,7 +15,7 @@ router = Router()
 @router.message(Command(commands=['start', 'help']))
 async def start_cmd_handler(message: Message, state: FSMContext) -> None:
     try:
-        await message.reply("Вас приветствует Экспо-Бот! \n<b>v.1.3 - от 27.10.23</b>", reply_markup=get_inline_main()
+        await message.reply("Вас приветствует Экспо-Бот! \n<b>v.1.4 - от 29.01.24</b>", reply_markup=get_inline_main()
                             )
         await message.answer("<b>✅ Выберете действие:</b>", reply_markup=get_reply_main()
                              )
